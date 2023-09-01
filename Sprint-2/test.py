@@ -55,14 +55,34 @@
 
 #print(ab, cd!)
 
-def fun(nums, target):
-    lst = []    
-    for i in nums:
-        if target - i in nums:
-            i2 = target - i
-            lst.append(nums.index(i))
-            lst.append(nums.index(i2))
-            break
-    return lst
+# def fun(nums, target):
+#     lst = []    
+#     for i in nums:
+#         if target - i in nums:
+#             i2 = target - i
+#             lst.append(nums.index(i))
+#             lst.append(nums.index(i2))
+#             break
+#     return lst
 
-print(fun([1, 2, 3, 4, 5], 8))
+# print(fun([1, 2, 3, 4, 5], 8))
+
+
+keys = ["a", " b", "c"]
+values = [1, 2, 3]
+# d = {key: value for key, value in zip(keys, values)}
+d = dict(zip(keys, values))
+print(d)
+
+def my_zip(ar1, ar2):
+    result = []
+    for i in range(len(ar1)):
+        t = (ar1[i], ar2[i])
+        result.append(t)
+    return result
+
+d2 = dict(my_zip(keys, values))
+print(d2)
+
+d3 = dict([(keys[i], values[i]) for i in range(len(keys))])
+print(d3)
