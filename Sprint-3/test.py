@@ -123,11 +123,11 @@
 # integer = 1000
 # print(dir(integer))
 
-gen = (i * 2 for i in range(1,11))
-print(type(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
+# gen = (i * 2 for i in range(1,11))
+# print(type(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
 
 # ## for in
 # # Behind the scenes, this is equivalent to manually using an iterator and next() function:
@@ -141,3 +141,18 @@ print(next(gen))
 #         break
 
 
+# lst = [1, 2]
+
+# def a(ls):
+#     ls.append(3)
+
+# a(lst)
+# print(lst)
+
+# def outer(x):
+#     return lambda: x ** 2
+
+# print(outer(5))
+
+x = 5
+print((lambda x: x ** 2)(x))
