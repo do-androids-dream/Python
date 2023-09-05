@@ -21,6 +21,9 @@ class Test:
         self._b = b
         self.__c = c
     
+    def print_self(self):
+        print(self)
+
     def __get_a(self):
         return self._a
     
@@ -56,3 +59,8 @@ print(t1.b, t2.b)
 print(t1._a)
 print(t2._Test__c)
 print(t2.c)
+
+t1.print_self()
+
+lst = []
+print(lst[-1])
