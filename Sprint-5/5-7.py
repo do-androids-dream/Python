@@ -11,7 +11,7 @@ in the case of incorrect data the function should be displayed the message - "Yo
 
 class ToSmallNumberGroupError(Exception):
     def __init__(self):
-        self.message = "We obtain error: Number of your group can't be less than 10"
+        self.message = "We obtain error:Number of your group can't be less than 10"
     
     def __repr__(self):
         return self.message
@@ -19,12 +19,13 @@ class ToSmallNumberGroupError(Exception):
 def check_number_group(number):
     try:
         number = int(number)
-        if number > 10: print(f"Number of your group {number} is valid")
+        if number > 10: res = (f"Number of your group {number} is valid")
         else: raise ToSmallNumberGroupError
     except ToSmallNumberGroupError as e:
-        print(e.message)
+        res = e.message
     except ValueError:
-        print("You entered incorrect data. Please try again.")
+        res = "You entered incorrect data. Please try again."
+    return res
 
 
 check_number_group(4)       #output:    "We obtain error: Number of your group can't be less than 10 "
