@@ -24,12 +24,15 @@ class Pizza:
     def __get_ingredients(self):
         return self._ingredients
 
+    @staticmethod
     def hawaiin():
         return Pizza(["ham", "pineapple"])
 
+    @staticmethod
     def meat_festival():
         return Pizza(["beef", "meatball", "bacon"])
     
+    @staticmethod
     def garden_feast():
         return Pizza(["spinach", "olives", "mushroom"])
 
