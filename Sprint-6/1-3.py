@@ -68,7 +68,7 @@ def user_with_department(csv_file, user_json, department_json):
                 for user in user_data:
                     validate_json(user, user_schema)
                     if user['department_id'] not in dep_id_name:
-                        raise DepartmentName(f"Department with id {user['department_id']} not found")
+                        raise DepartmentName(f"Department with id {user['department_id']} doesn't exists")
                     
                     writer.writerow({'name': user['name'], 'department': dep_id_name[user["department_id"]]})
 
